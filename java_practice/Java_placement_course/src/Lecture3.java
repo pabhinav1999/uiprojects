@@ -1,5 +1,5 @@
 import java.util.*;
-class ThirdClass {
+class Lecture3 {
     public static void main (String args[]){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the age:");
@@ -71,6 +71,7 @@ class ThirdClass {
 
             default : System.out.println(a%b);
         }
+        sc.close();
 
     }
 }
