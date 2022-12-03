@@ -16,6 +16,7 @@ class Lecture8 {
         System.out.println(canVote(b));
         userEnterNumber();
         System.out.println(calculatePower(8,3));
+        printFibonacciSeries(c);
     }
 
     public static void printAverage(int n1,int n2,int n3){
@@ -72,6 +73,25 @@ class Lecture8 {
              product = product * x;
         }
         return product;
+    }
+
+    public static int greatestCommondivisor(int a,int b){
+        if (b==0)
+         return a;
+        return greatestCommondivisor(b, a%b);
+    }
+
+    public static void printFibonacciSeries(int n){
+        int f1 = 0; int f2 = 1;
+        if(n < 1)
+        return ;
+        System.out.println(f1+" ");
+            for(int i=1;i<n;i++){
+                System.out.println(f2+" ");
+                int next = f1 + f2;
+                f1 = f2;
+                f2 = next;
+            }
     }
 
 
