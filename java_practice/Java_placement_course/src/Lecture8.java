@@ -16,7 +16,10 @@ class Lecture8 {
         System.out.println(canVote(b));
         userEnterNumber();
         System.out.println(calculatePower(8,3));
+<<<<<<< Updated upstream
         printFibonacciSeries(c);
+=======
+>>>>>>> Stashed changes
     }
 
     public static void printAverage(int n1,int n2,int n3){
@@ -75,6 +78,7 @@ class Lecture8 {
         return product;
     }
 
+<<<<<<< Updated upstream
     public static int greatestCommondivisor(int a,int b){
         if (b==0)
          return a;
@@ -94,5 +98,7 @@ class Lecture8 {
             }
     }
 
+=======
+>>>>>>> Stashed changes
 
 }
