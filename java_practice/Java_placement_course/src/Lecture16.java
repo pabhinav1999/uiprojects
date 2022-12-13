@@ -11,30 +11,30 @@ class Lecture16 {
         int arr[] = {7,8,3,1,2,0} ;
 
         //bubble sort 
-        // for(int i=0;i<arr.length-1;i++){
-        //     for(int j=0;j<arr.length-1-i;j++){
-        //         if(arr[j]>arr[j+1]){
-        //             int temp = arr[j];
-        //             arr[j] = arr[j+1];
-        //             arr[j+1] = temp;
-        //         }
-        //     }
-        // }
+        for(int i=0;i<arr.length-1;i++){
+            for(int j=0;j<arr.length-1-i;j++){
+                if(arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
 
         //selectionsort
-        // for(int i=0;i<arr.length;i++){
-        //     int smallest = i;
-        //     for(int j=i;j<arr.length;j++){
-        //         if(arr[j]<arr[smallest]){
-        //             smallest = j;
-        //         }
-        //     }
-        //     int temp = arr[smallest];
-        //     arr[smallest] = arr[i];
-        //     arr[i] = temp ;
-        // }
+        for(int i=0;i<arr.length;i++){
+            int smallest = i;
+            for(int j=i;j<arr.length;j++){
+                if(arr[j]<arr[smallest]){
+                    smallest = j;
+                }
+            }
+            int temp = arr[smallest];
+            arr[smallest] = arr[i];
+            arr[i] = temp ;
+        }
 
-        // //insertion sort
+        // insertion sort
 
         for(int i=0;i<arr.length;i++){
             int current = arr[i];
