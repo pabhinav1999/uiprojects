@@ -17,8 +17,6 @@ class Lecture8 {
         userEnterNumber();
         System.out.println(calculatePower(8,3));
         printFibonacciSeries(c);
-        userEnterNumber();
-        System.out.println(calculatePower(8,3));
     }
 
     public static void printAverage(int n1,int n2,int n3){
@@ -44,6 +42,56 @@ class Lecture8 {
 
     public static String canVote(int  age){
         return age> 18 ? "Can Vote" : "Cannot vote" ;
+    }
+
+    public static void userEnterNumber(){
+        Scanner sc = new Scanner(System.in);
+        int positiveNumbers = 0;
+        int negativeNumbers = 0;
+        int zeroNumbers = 0;
+        int code;
+        do{
+            System.out.println("Enter a number");
+            int number = sc.nextInt();
+            if( number > 0){
+                positiveNumbers++;
+            } else if(number < 0){
+                negativeNumbers++;
+            }else{
+                zeroNumbers++;
+            }
+            System.out.println("enter a whether you want to   number");
+             code = sc.nextInt();
+        }while(code == 1);
+
+        System.out.println(positiveNumbers+"  "+zeroNumbers+" "+negativeNumbers);
+    }
+
+    public static int calculatePower(int x,int n){
+        int product = 1;
+        for(int i = 1;i<=n;i++){
+             product = product * x;
+        }
+        return product;
+    }
+
+    public static int greatestCommondivisor(int a,int b){
+        if (b==0)
+         return a;
+        return greatestCommondivisor(b, a%b);
+    }
+
+    public static void printFibonacciSeries(int n){
+        int f1 = 0; int f2 = 1;
+        if(n < 1)
+        return ;
+        System.out.println(f1+" ");
+            for(int i=1;i<n;i++){
+                System.out.println(f2+" ");
+                int next = f1 + f2;
+                f1 = f2;
+                f2 = next;
+            }
     }
 
 
