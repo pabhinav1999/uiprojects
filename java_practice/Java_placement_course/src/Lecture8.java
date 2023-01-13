@@ -17,6 +17,11 @@ class Lecture8 {
         userEnterNumber();
         System.out.println(calculatePower(8,3));
         printFibonacciSeries(c);
+<<<<<<< Updated upstream
+=======
+        userEnterNumber();
+        System.out.println(calculatePower(8,3));
+>>>>>>> Stashed changes
     }
 
     public static void printAverage(int n1,int n2,int n3){
@@ -44,6 +49,7 @@ class Lecture8 {
         return age> 18 ? "Can Vote" : "Cannot vote" ;
     }
 
+<<<<<<< Updated upstream
     public static void userEnterNumber(){
         Scanner sc = new Scanner(System.in);
         int positiveNumbers = 0;
@@ -94,5 +100,7 @@ class Lecture8 {
             }
     }
 
+=======
+>>>>>>> Stashed changes
 
 }
