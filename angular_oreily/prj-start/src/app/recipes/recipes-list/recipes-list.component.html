@@ -1,0 +1,16 @@
+<div class="btn-container">
+    <button class="new-recipe-btn">New Recipe</button>
+</div>
+<div *ngFor="let recipe of recipes" class="display-recipe-item">
+    <div class="text-details">
+        <h3>{{recipe.name}}</h3>
+        <p>{{recipe.description}}</p>
+    </div>
+    <div class="image-container">
+        <img [src]="recipe.imagePath" alt="" width="50px" height="50px">
+    </div>
+
+</div>
+<app-recipe-item></app-recipe-item>
+<app-recipe-item></app-recipe-item>
+

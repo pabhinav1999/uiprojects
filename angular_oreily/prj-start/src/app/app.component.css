@@ -1,0 +1,21 @@
+body {
+    box-sizing: border-box;
+    margin:auto;
+    padding:10px;
+}
+
+.content-container {
+    display:flex;
+    flex-direction: row;
+}
+
+.recipes-container {
+  /* text-align: center; */
+  /* align-content: flex-start; */
+  /* display: flex; */
+  flex: 2;
+}
+
+.shopping-list-container {
+   flex: 1
+}
