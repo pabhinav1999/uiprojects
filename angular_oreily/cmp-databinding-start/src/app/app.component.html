@@ -1,0 +1,12 @@
+<div class="container">
+  <app-cockpit
+    (srvCreated)="onServerAdded($event)"
+    (bluePrintCreated)="onblueprintAdded($event)"
+  ></app-cockpit>
+  <hr />
+  <app-server-element
+    [srvElement]="serverElement"
+    *ngFor="let serverElement of serverElements"
+  ><h3>Hello</h3></app-server-element>
+
+</div>
