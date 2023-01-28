@@ -1,11 +1,11 @@
 <body>
-<app-header></app-header>
+<app-header (selectedFeature)="showSelectedSection($event)"></app-header>
 <div class="content-container">
   <div class="recipes-container">
-      <app-recipes></app-recipes>
+      <app-recipes *ngIf="selectedFeature === 'recipe'"></app-recipes>
   </div>
   <div class="shopping-list-container">
-      <app-shopping-list></app-shopping-list>
+      <app-shopping-list *ngIf="selectedFeature === 'shoppinglist'"></app-shopping-list>
   </div>
 </div>
   

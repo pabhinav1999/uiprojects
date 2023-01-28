@@ -1,0 +1,18 @@
+.display-recipe-item{
+    display:flex;
+    flex-direction: row;
+    padding: 5px;
+    /* border: 1px solid rebeccapurple; */
+    background-color: beige;
+    /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); */
+   }
+
+.display-recipe-item .text-details {
+     flex:6;
+     /* display: flex; */
+
+}
+
+.display-recipe-item .image-container {
+    flex:1;
+}

@@ -4,3 +4,8 @@
     color: white;
     padding: 5px;
 }
+
+.recipe-detail-contents {
+    display: flex;
+    flex-direction: column;
+}

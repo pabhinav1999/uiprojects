@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  selectedFeature:string;
+  showSelectedSection(event:any){
+    this.selectedFeature = event;
+    console.log(event);
+  }
 }
