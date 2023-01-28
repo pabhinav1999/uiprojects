@@ -1,0 +1,27 @@
+.input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.ingredients-btn-container  {
+    display: flex;
+    flex-direction: row;
+}
+
+.ingredients-btn-container button {border-radius: 5px;
+    color: black;
+    padding: 5px;
+ }
+
+.ingredients-btn-container .add {
+    background-color: greenyellow;
+}
+
+.ingredients-btn-container .delete {
+    background-color: red;
+}
+
+.ingredients-btn-container .clear {
+    background-color: blue;
+}
+

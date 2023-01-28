@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
-
+  selectedRecipe;
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  setRecipe(event){
+    console.log('qaya');
+    console.log(event);
+    this.selectedRecipe = event ;
+   }
 
 }

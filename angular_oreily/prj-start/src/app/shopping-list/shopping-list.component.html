@@ -1,4 +1,4 @@
-<app-shopping-list-edit></app-shopping-list-edit>
+<app-shopping-list-edit (newIngredient)="addNewIngredientIntoList($event)"></app-shopping-list-edit>
 <div *ngFor = "let ingredient of ingredients"class="ingredient-layout">
     <span> {{ ingredient.name }} ({{ingredient.amount}})</span>
 </div>
