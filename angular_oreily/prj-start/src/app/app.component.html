@@ -1,11 +1,11 @@
 <body>
-<app-header (selectedFeature)="showSelectedSection($event)"></app-header>
+<app-header (componentSelected)="toggleComponent($event)"></app-header>
 <div class="content-container">
-  <div class="recipes-container">
-      <app-recipes *ngIf="selectedFeature === 'recipe'"></app-recipes>
+  <div *ngIf="showRecipe" class="recipes-container">
+      <app-recipes></app-recipes>
   </div>
-  <div class="shopping-list-container">
-      <app-shopping-list *ngIf="selectedFeature === 'shoppinglist'"></app-shopping-list>
+  <div *ngIf="!showRecipe" class="shopping-list-container">
+      <app-shopping-list></app-shopping-list>
   </div>
 </div>
   
