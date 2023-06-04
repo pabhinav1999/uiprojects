@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServersService } from './servers.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-servers',
@@ -9,18 +10,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ServersComponent implements OnInit {
   public servers: {id: number, name: string, status: string}[] = [];
+  queryparamsSubs:Subscription;
 
   constructor(private serversService: ServersService,
-    private router:Router,
-    private route:ActivatedRoute) { }
+    private router:Router, private route:ActivatedRoute ) { }
 
   ngOnInit() {
     this.servers = this.serversService.getServers();
+    console.log(this.route.snapshot.queryParams);
+    console.log(this.route.snapshot.fragment);
   }
 
-  onReloadPage(){
-    this.router.navigate(['users'],{relativeTo : this.route});
-    
+  onclick(){
+    this.router.navigate(['../users'], {relativeTo:this.route});
   }
+
 
 }
