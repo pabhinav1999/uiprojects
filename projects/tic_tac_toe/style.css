@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: beige;
+    /* background-color: beige; */
 }
 nav {
     background-color: black;
@@ -28,19 +28,41 @@ nav ul {
 
 .grid-container {
     display:grid;
-    height:600px;
-    width:600px;
+    height:453px;
+    width:453px;
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(3,1fr);
-    grid-row-gap:12px;
-    grid-column-gap:12px;
-    background-color: yellow;
+    /* grid-row-gap:12px; */
+    /* grid-column-gap:12px; */
+    background-color: rgb(240, 217, 237);
     place-items: center;
 }
 
 .grid-container .box {
     width: 150px;
     height: 150px;
+    /* border:1px solid black; */
+
+    &.bt-1 {
+        border-top: 1px solid black;
+    }
+    
+    &.bl-1 {
+        border-left: 1px solid black;
+    }
+    
+    &.br-1{
+        border-right: 1px solid black;
+    }
+    
+    &.bb-1{
+        border-bottom: 1px solid black;
+    }
+
+    &:hover {
+           background-color: aquamarine;
+    }
+    
 }
 
 .grid-container .box .box-info {
@@ -50,6 +72,7 @@ nav ul {
     font-weight:400;
     color:blue;
     text-align: center;
+    padding:0 30px;
 }
 
 .game-info  {
@@ -57,3 +80,4 @@ nav ul {
     background-color: aquamarine;
 
 }
+
