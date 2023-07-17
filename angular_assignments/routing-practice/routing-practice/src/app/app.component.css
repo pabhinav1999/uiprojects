@@ -1,0 +1,26 @@
+li {
+    list-style-type: none;
+    
+}
+
+.navbar {
+    display: flex;
+    flex-direction:row;
+}
+
+.tab-bg {
+    background-color: gray;
+}
+
+.navbar-tab {
+    padding: 10px;
+    /* margin: 0 auto; */
+    vertical-align: middle;
+    box-shadow: 0 0 2px rgba(0,0,0,0.754 );
+}
+
+.navbar-tab a {
+    text-decoration: none;
+    color: black;
+
+}
