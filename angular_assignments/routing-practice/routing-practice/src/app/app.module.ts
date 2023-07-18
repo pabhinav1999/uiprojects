@@ -11,6 +11,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { HomechildrenComponent } from './homechildren/homechildren.component';
 import { CourseComponent } from './courses/course/course.component';
+import { FormsModule } from '@angular/forms';
 
 const appRoutes:Route[] = [
   {path:'',redirectTo:'home',pathMatch:'full'},
@@ -39,6 +40,7 @@ const appRoutes:Route[] = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

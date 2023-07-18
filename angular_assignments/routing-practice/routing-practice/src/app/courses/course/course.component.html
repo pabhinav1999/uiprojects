@@ -1,7 +1,11 @@
 
 <div class="course-container">
-    <p>{{course.title}}</p>
-    <p>{{course.author}}</p>
-    <p>{{course.id}}</p>
-    <button>Show Details</button>
+    <p *ngIf="!editMode">Course Title is {{course.title}}</p>
+    <input *ngIf="editMode" type="text" name="" id="" [(ngModel)]="course.title">
+    <p>Course author is {{course.author}}</p>
+    <p>Course id is {{course.id}}</p>
+    <button (click)="goToFirstCourse()">Go to First Course</button>
+    <button (click)="onEdit()">Edit</button>
+    <button (click)="onUpdate()">Update </button>
+    <!-- <button>Show Details</button> -->
 </div>
