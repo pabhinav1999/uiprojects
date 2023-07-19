@@ -8,23 +8,11 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoursesComponent } from './courses/courses.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { Route, RouterModule, Routes } from '@angular/router';
 import { HomechildrenComponent } from './homechildren/homechildren.component';
 import { CourseComponent } from './courses/course/course.component';
 import { FormsModule } from '@angular/forms';
 
-const appRoutes:Route[] = [
-  {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'home',component:HomeComponent},
-  {path:'about',component:AboutComponent},
-  {path:'contact',component:ContactComponent},
-  {path:'courses',component:CoursesComponent},
-  {path:'courses/course/:id',component:CourseComponent},
-  {path:'home/homechildren',component:HomechildrenComponent},
-  {path:'**',component:PagenotfoundComponent},
 
-
-]
 
 @NgModule({
   declarations: [
@@ -40,8 +28,7 @@ const appRoutes:Route[] = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
