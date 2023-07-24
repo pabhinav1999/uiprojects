@@ -1,0 +1,19 @@
+<div>
+  <label for="filterCriteria"></label>
+  <input type="text" name="" id="filterCriteria" [(ngModel)]="filtervalue">
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Marks</th>
+    <th>Percentage</th>
+    <th>Gender</th>
+  </tr>
+  <tr *ngFor="let student of students|filter:filtervalue">
+    <th>{{student.name}}</th>
+    <th>{{student.marks}}</th>
+    <th>{{student.marks| percentage:student.maxMarks }}</th>
+    <th>{{student.gender}}</th>
+  </tr>
+   
+</table>
