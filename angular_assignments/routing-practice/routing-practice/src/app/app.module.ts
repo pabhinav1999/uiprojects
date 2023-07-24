@@ -28,7 +28,11 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< Updated upstream
     FormsModule
+=======
+    FormsModule,
+>>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]
