@@ -1,0 +1,38 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+nav h1 {
+    color : blueviolet;
+    font-size: 40px;
+}
+nav ul {
+    display: inline-flex;
+    list-style-type: none;
+}
+nav li {
+    padding: 8px;
+}
+nav a {
+    text-decoration: none;
+    color: blueviolet;
+}
+.search-bar {
+    display: flex;
+    flex:1;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5px;
+}
+.search-bar input {
+    height: 40px;
+    border:1px solid blueviolet;
+    border-right: none;
+    flex: 1;
+}
+.search-bar button {
+    height: 42px;
+    border:1px solid blueviolet;
+    border-left: none;
+}
