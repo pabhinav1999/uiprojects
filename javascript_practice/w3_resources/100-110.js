@@ -24,3 +24,5 @@ console.log(checkCommonElement(q100arr1,q100arr2));
 //101. Write a JavaScript program to check whether a given string contains
 //  only Latin letters and no two uppercase and no two lowercase letters are in adjacent positions.
 
+const regex = /(([A-Z]{1}[a-z]{1})+|([a-z]{1}|[A-Z]{1})+)/;
+console.log(regex.test('MMM'));
