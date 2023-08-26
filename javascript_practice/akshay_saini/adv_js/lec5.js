@@ -4,6 +4,7 @@ var x = 1;
 a();
 b();
 console.log(x);
+// x is local to the execution context
 
 function a(){
     var x = 10;
