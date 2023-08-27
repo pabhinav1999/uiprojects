@@ -1,0 +1,35 @@
+<p>directive practice</p>
+ <h1> Hi I am structural directive</h1>
+<p>Structural directives</p>
+<!-- ngClass -->
+<div  [ngClass]=" isSpecial ? 'specialClass' : 'normalClass'">
+    Hello
+</div>
+
+<!-- ngStyle -->
+<!-- <div [ngStyle]=" isSpecial ? '[' h1 : { background-color:"pink"}']'"></div> -->
+<div [ngStyle]="currentStyles">
+    <h1>How do you do</h1> </div>
+
+<!-- ngModel -->
+
+<input type="text" [(ngModel)]="userName">
+<p>{{userName}}</p>
+
+<!-- *ngIf -->
+<div *ngIf="isSpecial;else notSpecial">
+    <h1>this is a special div</h1>
+</div>
+
+<ng-template #notSpecial>
+    <div>This is a normal div</div>
+</ng-template>
+
+<!-- *ngFor -->
+<div *ngFor="let student of students">
+    <p>{{student.name}}</p>
+</div>
+
+
+<!-- Custom attribute -->
+<p appHighlight>Please Highlight me</p>
