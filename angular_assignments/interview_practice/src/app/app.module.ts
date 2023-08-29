@@ -10,6 +10,7 @@ import { DirectivePracComponent } from './directive-prac/directive-prac.componen
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { StudentService } from './student.service';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StudentService } from './student.service';
     LifecycledemoComponent,
     CustPipe,
     DirectivePracComponent,
-    HighlightDirective
+    HighlightDirective,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
