@@ -1,0 +1,13 @@
+.title {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 8px;
+    width: 300px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    width:200px;
+    padding: 10px;
+}
