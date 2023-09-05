@@ -1,0 +1,16 @@
+<app-component1 (emitAString)="onEmittingAString($event)"></app-component1>
+<div  >
+  <input type="text" #input>
+  <button disabled='true' type="submit" (click)="onSubmit(input)">Submit</button>
+  <p>{{ 25 | currency}}</p>
+  <p>{{ 37 | cust: 3: 10}}</p>
+  <p>Total Students : {{totalStudents|async}}</p>
+  <app-lifecycledemo [enteredValue] = "enteredValue" >
+     <p question>I am aprojected content at peak {{enteredValue | uppercase | lowercase }}</p>
+  </app-lifecycledemo>
+</div>
+<app-directive-prac></app-directive-prac>
+
+
+
+
