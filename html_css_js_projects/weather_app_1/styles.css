@@ -91,3 +91,17 @@
     height: 40px;
     width: 40px
  }
+
+ .weather .col-container .col .humidity-percentage,.wind-speed {
+  font-size: 30px;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+ .weather .col-container .col .second-detail {
+  font-size: 20px;
+}
+
+
+
+
