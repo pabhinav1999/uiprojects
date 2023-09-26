@@ -102,6 +102,13 @@
   font-size: 20px;
 }
 
+.valid-city {
+  padding: 10px;
+  font-size: 14;
+  color: red;
+  text-align: left;
+}
+
 
 
 
