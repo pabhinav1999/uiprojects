@@ -1,0 +1,22 @@
+<div class="container">
+  <form (ngSubmit)="onSubmitForm()" #f="ngForm">
+    <div ngModelGroup="userDetails">
+      <label for="name" id="">Name :
+        <input type="text" name="username" id="name" required   ngModel>
+      </label>
+      <br>
+      <label for="email" id="">Email:
+        <input type="email" name="email" id="email" required email  >
+      </label>
+      <!-- <small *ngIf ="f.contols"></small> -->
+      <br>
+    </div>
+   
+    <label for="gender" >Gender</label>
+    <select name="gender" id="gender"  ngModel>
+      <option value="">Male</option>
+      <option value="">Female</option>
+    </select>
+    <button type="submit" [disabled]="f.invalid">Submit</button>
+  </form>
+</div>
