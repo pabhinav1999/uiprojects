@@ -118,7 +118,7 @@ getGithubDetails().then((res)=>{
     console.log("Hello there is a error");
 })
 
-//async and await are just syntactic sugars 
+//async and await are just syntactic sugars  
 
 //there are two ways to handle errors in async and await
 
