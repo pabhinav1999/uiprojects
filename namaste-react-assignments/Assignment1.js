@@ -59,8 +59,19 @@ A: React Development:
    faster than development
 
 8)Learn about async and defer
-
+A : Website loading includes two functions mainly html parsing , fetching and executing the scripts
+   <script>
+   Html parsing --> break --> js fetch --> js execute ---> continue html parsing
    
+   <script async>
+   Html parsing in parallel --> after fetching , executes --> continue html parsing
+   fecthing js 
+
+   <script defer>  
+   Html parsing  completes    --> after completeing parsing, executes
+   in parallel fetches scripts 
+
+   defer is preffered because async does not guarantee the order of execution
                        
 
 */
@@ -72,6 +83,8 @@ A: React Development:
 */
 
 // creating h1 element using javascript
+import React from 'react';
+import  ReactDOM  from 'react-dom';
 
 var headingFromJS = document.createElement("h1");
 headingFromJS.innerHTML = "Hello World created using Javascript";
