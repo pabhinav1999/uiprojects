@@ -1,0 +1,17 @@
+#q2 {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-adjust {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+}
+
