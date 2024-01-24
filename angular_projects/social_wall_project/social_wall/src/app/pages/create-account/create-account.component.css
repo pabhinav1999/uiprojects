@@ -1,0 +1,41 @@
+.form-container {
+    /* height: 30vh; */
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    width: 20%;
+    margin : 0 auto;
+    box-shadow: 0 2px 6px 1px rgba(0,0,0,0.2);
+    margin-top: 200px;
+    justify-content: space-between;
+}
+
+.login-title {
+    text-align: center;
+    
+}
+
+.form-fields-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-container p {
+    margin-top: 5px;
+}
+
+.btn-container .create-account-button {
+    background-color: #4285f4;
+    color: white;
+}
+
+
+
+
