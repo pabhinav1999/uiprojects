@@ -1,24 +1,35 @@
 <div class="container">
     <div class="form-container">
         <h2 class="login-title"> Create Account</h2>
-        <form class="form-fields-container">
+        <form class="form-fields-container" [formGroup]="createAccountForm">
             <mat-form-field appearance="outline">
                 <mat-label> Enter your Email</mat-label>
-                <input matInput type="text" placeholder="abc@xyz.com">
+                <input matInput type="text" placeholder="abc@xyz.com" formControlName="email">
+                <mat-error *ngIf="createAccountForm.controls.email.invalid">
+                    {{ createAccountForm.controls.email.hasError('required')? 'Email is required' : 'Please enter valid email'}}
+                 </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label> Enter your name</mat-label>
-                <input matInput type="text" placeholder="Abhinav">
+                <input matInput type="text" placeholder="Abhinav" formControlName="userName">
+                <mat-error *ngIf="createAccountForm.controls.userName.invalid">
+                    {{ createAccountForm.controls.userName.hasError('required')? 'UserName is required' : 'Username should be of maximum length 10 characters'}}
+
+                </mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label> Enter your passowrd</mat-label>
-                <input matInput type="password" >
+                <input matInput type="password" formControlName="password">
+                <mat-error *ngIf="createAccountForm.controls.password.invalid">
+                    {{ createAccountForm.controls.password.hasError('required')? 'Password is required' : 'Please enter password with min length of 6 characters'}}
+                 </mat-error>
             </mat-form-field>
         </form>
+        {{ createAccountForm.value | json}}
         <div class="btn-container">
             <button mat-raised-button class="create-account-button">Create Account</button>
             <p>OR</p>
-            <button mat-raised-button>Login</button>
+            <button routerLink="/login" mat-raised-button>Login</button>
             <!-- <mat-button></mat-button> -->
         </div>
         
