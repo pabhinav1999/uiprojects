@@ -1,0 +1,48 @@
+ 1. Get Request
+    http://localhost:3000/products/1
+    http://localhost:3000/reviews/5
+ 
+
+ 2.Filtering data 
+   Eg. based on category
+   http://localhost:3000/products?category=Electronics
+
+ 3. Sorting data 
+   Eg. based on price in descending order ( default is ascending order)
+   http://localhost:3000/products?_sort=price,category&_order=desc,asc
+
+4. Pagination
+  Eg. items will be divided into pages ( default size is 10 , but we can limit by giving _limit )
+  http://localhost:3000/products?_page=1&_limit=2
+
+
+5. Operators
+ Eg. price range between 2000 to 6000
+ http://localhost:3000/products?price_gte=2000&price_lte=3000
+
+ Eg. id not equal to 1
+ http://localhost:3000/products?id_ne=1
+
+ Eg. like operator which can use regex
+ http://localhost:3000/products?category_like=^f
+
+6. Full text search
+ Eg. Want to search text string with in
+ http://localhost:3000/products?q=in
+
+7. Relationships
+ Consider reviews as child resource , products as parent resource
+
+ To attach review to each item , use id 
+ http://localhost:3000/products?_embed=reviews
+
+ To attach each product in review use expand
+ http://localhost:3000/reviews?_expand=products
+
+8. Body post use thunder client
+9. Put,patch and delete use thunder client
+
+
+
+
+
