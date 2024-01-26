@@ -12,7 +12,10 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
 
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 const routes: Routes = [
+  { path: '' , redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component:  LoginComponent } ,
   { path: 'create-account',component: CreateAccountComponent }
 ];
@@ -30,7 +33,9 @@ const routes: Routes = [
     MatButtonModule,
     RouterModule.forRoot(routes),
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [RouterModule],
   providers: [],

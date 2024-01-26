@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-account',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor() { }
+  createAccountForm : any;
+
+  constructor( private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.initialiseForm();
   }
+ 
+  initialiseForm(){
+  this.createAccountForm = this.fb.group ({
+    email: ['',[Validators.required, Validators.email]],
+    userName: ['',[Validators.required,Validators.maxLength(10)]],
+    password: ['',[Validators.required, Validators.minLength(6)]]
+  })
+}
 
 }
