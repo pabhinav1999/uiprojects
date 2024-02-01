@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "name": "Abhinav",
+      "email": "pabhinav1999@gmail.com",
+      "password": "Abhinav1999",
+      "id": "9cf2"
+    },
+    {
+      "id": "cba4",
+      "email": "pabhilash2000@gmail.com",
+      "userName": "Abhilash",
+      "password": "Abhilash2000"
+    },
+    {
+      "id": "427c",
+      "email": "JohnDoe@gmail.com",
+      "userName": "JohnDoe",
+      "password": "johndoe"
+    },
+    {
+      "id": "8e36",
+      "email": "ret@cbh.com",
+      "userName": "uionjksndj",
+      "password": "lomkinjs"
+    }
+  ],
+  "posts": []
+}

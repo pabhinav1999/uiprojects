@@ -13,6 +13,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 const routes: Routes = [
   { path: '' , redirectTo: 'login', pathMatch: 'full' },
@@ -25,7 +26,7 @@ const routes: Routes = [
     AppComponent,
     TopBarComponent,
     LoginComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,8 @@ const routes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   exports: [RouterModule],
   providers: [],
