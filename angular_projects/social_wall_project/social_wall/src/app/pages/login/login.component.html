@@ -17,9 +17,8 @@
                  </mat-error>
             </mat-form-field>
         </form>
-        {{ loginForm.value| json}}
         <div class="btn-container">
-            <button mat-raised-button class="login-button">Login</button>
+            <button mat-raised-button [disabled]="loginForm.invalid" (click)="getUserDetails(loginForm.value.email)" class="login-button">Login</button>
             <p>OR</p>
             <button routerLink="/create-account" mat-raised-button>Create an account</button>
         </div>
