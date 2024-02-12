@@ -14,11 +14,16 @@ import { CreateAccountComponent } from './pages/create-account/create-account.co
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { PostsComponent } from './pages/posts/posts.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 
 const routes: Routes = [
   { path: '' , redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component:  LoginComponent } ,
-  { path: 'create-account',component: CreateAccountComponent }
+  { path: 'create-account',component: CreateAccountComponent },
+  { path: 'posts', component: PostsComponent}
 ];
 
 @NgModule({
@@ -27,6 +32,7 @@ const routes: Routes = [
     TopBarComponent,
     LoginComponent,
     CreateAccountComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,10 @@ const routes: Routes = [
     MatFormFieldModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule,
+    MatIconModule,
+    MatMenuModule
   ],
   exports: [RouterModule],
   providers: [],

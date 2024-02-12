@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
 
+  public user: any; //used to store user across the website
+
   constructor( private http : HttpClient) { }
 
   public createNewUser(userObj: any ): Observable<any>{
