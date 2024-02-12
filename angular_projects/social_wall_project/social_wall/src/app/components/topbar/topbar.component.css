@@ -19,3 +19,15 @@
     flex-direction: row;
     align-items: center;
 }
+
+.account {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 100px;
+}
+
+.account .mat-icon {
+    font-size: 30px;
+}
