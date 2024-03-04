@@ -19,6 +19,7 @@ export class TopBarComponent {
   onLogOutClicked(){
     this.router.navigate(['/']);
     this.userService.user = undefined;
+    localStorage.clear();
     console.log('logout clicked');
   }
 
