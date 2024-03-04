@@ -33,6 +33,7 @@ createUser() {
   console.log(this.createAccountForm.value)
   this.userService.createNewUser(this.createAccountForm.value).subscribe((response)=>{
     this.userService.user = response[0];
+    localStorage.setItem('user',JSON.stringify(response[0]));
     this.router.navigate(['/posts']);
     this.openSnackBar('Account created Succesfully', 'Ok', 2000);
     console.log('User account created succesfully')

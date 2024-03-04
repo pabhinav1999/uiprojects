@@ -55,6 +55,7 @@ openSnackBar( message: string ,action?: string | undefined){
       this.openSnackBar('Please enter password again','Try Again');
     } else {
       this.userService.user = users[0];
+      localStorage.setItem('user',JSON.stringify(users[0]))
       this.router.navigate(['/posts'])
       this.openSnackBar('Login Succesful');
       console.log('login succesful');
