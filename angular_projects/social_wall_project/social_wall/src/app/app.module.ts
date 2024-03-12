@@ -20,7 +20,10 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {TextFieldModule} from '@angular/cdk/text-field';
+import { AngularFireModule } from '@angular/fire/compat';
 import { Text } from '@angular/compiler/src/render3/r3_ast';
+import { environment } from 'src/environments/environment';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 const routes: Routes = [
   { path: '' , redirectTo: 'login', pathMatch: 'full' },
@@ -51,7 +54,9 @@ const routes: Routes = [
     MatIconModule,
     MatMenuModule,
     MatCardModule,
-    TextFieldModule
+    TextFieldModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    MatFormFieldModule
   ],
   exports: [RouterModule],
   providers: [],
