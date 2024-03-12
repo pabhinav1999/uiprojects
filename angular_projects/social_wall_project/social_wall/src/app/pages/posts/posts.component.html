@@ -3,6 +3,15 @@
     <textarea matInput cdkTextareaAutosize #autoSize="cdkTextareaAutosize" cdkAutosizeMaxRows="10" cdkAutosizeMinRows="3"></textarea>
 </mat-form-field>
 
+<div class="posts-container">
+     <button mat-raised-button color="primary"> Post</button>
+     <mat-form-field>
+      <ngx-mat-file-input formControlName="basicfile" placeholder="Basic Input" ></ngx-mat-file-input>
+      <mat-icon matSuffix>folder</mat-icon>
+    </mat-form-field>
+  
+</div>
+
 <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>

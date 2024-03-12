@@ -1,0 +1,3 @@
+This folder contains JavaScript content organized by topics, accompanied by my hand-written notes featuring code snippets. 
+I sourced this material from YouTube channels, specifically from Akshay Saini and Road Side Coder's JavaScript interview playlist.
+I extend my gratitude to them for providing valuable content.
