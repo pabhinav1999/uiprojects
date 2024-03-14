@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #question1 > div,form,button {
+           min-width: 100px;
+           padding: 30px;
+           border: 1px solid black;
+        }
+
+        .grid-container {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px; /* Adjust gap as needed */
+            padding: 20px;
+            justify-items: center;
+            border: 1px solid;
+        }
+        
+        .grid-item {
+            background-color: bisque;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        #openModalQues {
+           padding: 10px;
+        }
+
+        .modal-container {
+            height: 600px;
+            width: 600px;
+            background-color: grey;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+         .modal {
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+            justify-content: space-between;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="question1">
+        <div  >
+            <form >
+                <button >Click Me</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="event_delegation" class="grid-container">
+        <span id="laptops" class="grid-item"><b>Laptops</b></span>
+        <span id="accesories" class="grid-item">Accessories</span>
+        <span id="mobiles" class="grid-item">Mobiles</span>
+        <span id="grocery" class="grid-item">Grocery</span>
+        <span id="hardware" class="grid-item">Hardware</span>
+        <span id="juices" class="grid-item">Juices</span>
+    </div>
+
+    <div id="openModalQues">
+        <button class="open-modal">Open Modal</button>
+        <div class="modal-container">
+            <div class="modal">Hello modal</div>
+        </div>
+    </div>
+
+    <script src="./event_propagation_interview.js"></script>
+</body>
+</html>

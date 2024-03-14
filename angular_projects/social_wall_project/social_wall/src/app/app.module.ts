@@ -23,8 +23,7 @@ import {TextFieldModule} from '@angular/cdk/text-field';
 import { AngularFireModule } from '@angular/fire/compat';
 import { Text } from '@angular/compiler/src/render3/r3_ast';
 import { environment } from 'src/environments/environment';
-import { MaterialFileInputModule } from 'ngx-material-file-input';
-
+import { AngularFireStorageModule }  from '@angular/fire/compat/storage';
 const routes: Routes = [
   { path: '' , redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component:  LoginComponent } ,
@@ -56,7 +55,9 @@ const routes: Routes = [
     MatCardModule,
     TextFieldModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    MatFormFieldModule
+    MatFormFieldModule,
+    AngularFireStorageModule
+  
   ],
   exports: [RouterModule],
   providers: [],

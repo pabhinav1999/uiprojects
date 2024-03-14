@@ -4,11 +4,10 @@
 </mat-form-field>
 
 <div class="posts-container">
-     <button mat-raised-button color="primary"> Post</button>
-     <mat-form-field>
-      <ngx-mat-file-input formControlName="basicfile" placeholder="Basic Input" ></ngx-mat-file-input>
-      <mat-icon matSuffix>folder</mat-icon>
-    </mat-form-field>
+     <button mat-raised-button color="primary" (click)="post()"> Post</button>
+    <div class="file-container">
+      <input (change)="onFileSelected($event)" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+    </div>
   
 </div>
 
