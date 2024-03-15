@@ -61,5 +61,106 @@
       "password": "abcxyz"
     }
   ],
-  "posts": []
+  "posts": [
+    {
+      "id": "0afd",
+      "username": {
+        "id": "f1d5",
+        "email": "abc@xyz.com",
+        "userName": "abcxyz",
+        "password": "abcxyz"
+      },
+      "imageURL": "https://firebasestorage.googleapis.com/v0/b/sbook-socialwall.appspot.com/o/images%2F1710419177007?alt=media&token=7b614d0a-71c6-4bbc-acf6-2cc5229d6fd4",
+      "text": "First Post",
+      "likes": [
+        10
+      ],
+      "comments": [
+        {
+          "username": "msd",
+          "comment": "Come the IPL , Come me"
+        }
+      ]
+    },
+    {
+      "id": "d2a8",
+      "username": {
+        "id": "f1d5",
+        "email": "abc@xyz.com",
+        "userName": "abcxyz",
+        "password": "abcxyz"
+      },
+      "imageURL": "https://firebasestorage.googleapis.com/v0/b/sbook-socialwall.appspot.com/o/images%2F1710420131431?alt=media&token=8203d517-7eac-4a75-b8e2-367c522f6e86",
+      "text": "This is a appreciation post for teachers",
+      "likes": [
+        10
+      ],
+      "comments": [
+        {
+          "username": "msd",
+          "comment": "Come the IPL , Come me"
+        }
+      ]
+    },
+    {
+      "id": "f407",
+      "username": {
+        "id": "f1d5",
+        "email": "abc@xyz.com",
+        "userName": "abcxyz",
+        "password": "abcxyz"
+      },
+      "imageURL": "https://firebasestorage.googleapis.com/v0/b/sbook-socialwall.appspot.com/o/images%2F1710421318912?alt=media&token=873e11fe-1291-438c-87ed-6a7fc535ff86",
+      "text": "brahmotsavam",
+      "likes": [
+        10
+      ],
+      "comments": [
+        {
+          "username": "msd",
+          "comment": "Come the IPL , Come me"
+        }
+      ]
+    },
+    {
+      "id": "0065",
+      "username": {
+        "id": "f1d5",
+        "email": "abc@xyz.com",
+        "userName": "abcxyz",
+        "password": "abcxyz"
+      },
+      "imageURL": "https://firebasestorage.googleapis.com/v0/b/sbook-socialwall.appspot.com/o/images%2F1710421323191?alt=media&token=fdd3b5d0-5293-44fc-abd4-a936ddc9142a",
+      "text": "brahmotsavam",
+      "likes": [
+        10
+      ],
+      "comments": [
+        {
+          "username": "msd",
+          "comment": "Come the IPL , Come me"
+        }
+      ]
+    },
+    {
+      "id": "df5b",
+      "username": {
+        "id": "f1d5",
+        "email": "abc@xyz.com",
+        "userName": "abcxyz",
+        "password": "abcxyz"
+      },
+      "imageURL": "https://firebasestorage.googleapis.com/v0/b/sbook-socialwall.appspot.com/o/images%2F1710421473538?alt=media&token=723a97a0-82ed-4772-af52-8d01ee45de24",
+      "text": "Ekkado chinna jeevitham",
+      "likes": [
+        10
+      ],
+      "comments": [
+        {
+          "username": "msd",
+          "comment": "Come the IPL , Come me"
+        }
+      ]
+    }
+  ]
 }

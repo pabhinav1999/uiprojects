@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { Router } from '@angular/router';
 import { finalize } from 'rxjs';
+import { PostsService } from 'src/app/services/posts.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -12,14 +13,21 @@ import { UsersService } from 'src/app/services/users.service';
 export class PostsComponent implements OnInit {
 
   selectedFile: any;
+  text: any;
+  postsUploaded: any;
 
-  constructor( private router: Router, public userService: UsersService, private storage: AngularFireStorage) { }
+  constructor( private router: Router, public userService: UsersService, private storage: AngularFireStorage,
+    public postsService: PostsService) { }
 
   ngOnInit(): void {
        if(!this.userService.user){
         let user = localStorage.getItem('user');
         if(user){
           this.userService.user = JSON.parse(user);
+           this.postsService.getPosts(this.userService.user.email).subscribe((posts)=>{
+            this.postsUploaded = posts;
+            console.log(this.postsUploaded);
+          });
         }else{
         this.router.navigate(['/login']);
         }
@@ -35,9 +43,25 @@ export class PostsComponent implements OnInit {
   post() {
     if(this.selectedFile){
       this.upLoadFile().then((imageURL) => {
-        console.log(imageURL);
+        this.createPost(imageURL);
       })
     }
+  }
+
+  createPost(imageURL: any){
+    const postObj = {
+      username: this.userService.user,
+      imageURL: imageURL,
+      text: this.text,
+      likes: [10],
+      comments: [{ username: 'msd', comment : 'Come the IPL , Come me'}]
+    }
+     this.postsUploaded.push(postObj);
+    this.postsService.createNewPost(postObj).subscribe((response)=>{
+      console.log(response);
+      console.log('post is pushed successfully');
+    });
+
   }
 
   upLoadFile(){
