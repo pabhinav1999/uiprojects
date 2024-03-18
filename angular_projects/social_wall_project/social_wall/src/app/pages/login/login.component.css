@@ -1,4 +1,5 @@
 .form-container {
+    background-color:rgba(189, 47, 190, 0.14);
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -29,6 +30,6 @@
 }
 
 .btn-container .login-button {
-    background-color: #4285f4;
+    background-color: rgba(189, 47, 190, 0.78);
     color: white;
 }
