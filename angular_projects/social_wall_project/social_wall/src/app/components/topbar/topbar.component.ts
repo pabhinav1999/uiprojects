@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { UsersService } from "src/app/services/users.service";
 
@@ -10,18 +10,28 @@ import { UsersService } from "src/app/services/users.service";
 })
 
 
-export class TopBarComponent {
+export class TopBarComponent implements OnInit {
 
   constructor(private router: Router, public userService:UsersService){
     
   }
 
+
+
+  ngOnInit(): void {
+    
+  }
+
+  
+
+
   onLogOutClicked(){
+    console.log(this.userService.user);
     this.router.navigate(['/']);
     this.userService.user = undefined;
     localStorage.clear();
     console.log('logout clicked');
   }
-
+ 
 
 }

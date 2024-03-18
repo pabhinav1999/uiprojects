@@ -3,7 +3,7 @@
     flex-direction: row;
     width: 100vw;
     height: 10vh;
-    background-color: #4285F4;
+    background-color: rgba(189, 47, 190, 0.78);
     box-shadow: 0 8px 6px -6px rgba(153,153,153,0.836);
     z-index: 10;
 
@@ -30,4 +30,8 @@
 
 .account .mat-icon {
     font-size: 30px;
+}
+
+.account .username {
+    padding-left: 10px;
 }
