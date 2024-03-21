@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/services/users.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { log } from 'console';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -18,6 +17,8 @@ export class LoginComponent implements OnInit {
   constructor( private fb : FormBuilder, private userService:UsersService, private _snackBar: MatSnackBar,private router: Router) { }
 
   ngOnInit(): void {
+    console.log('ngOninit called');       
+    // this.disableChromeAutofill();
     this.initailiseForm();
   }
 
@@ -27,6 +28,8 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required, Validators.minLength(6)]]
   })
 
+  this.loginForm.reset();
+
 
 }
 
@@ -35,12 +38,21 @@ openSnackBar( message: string ,action?: string | undefined){
 
   console.log(this.snackBarRef)
   this.snackBarRef.onAction().subscribe(()=>{
-    if( action === 'Create')
-    console.log('You can create account');
-    
-    if( action === 'Try Again')
-    console.log('You van try again');
+    if( action === 'Create'){
+    this.router.navigate(['/create-account']) ;
+    }
+
+    if( action === 'Try Again'){
+      this.reloadPage();
+    }
   })
+}
+
+reloadPage() {
+  const currentUrl = this.router.url;
+  this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+    this.router.navigate([currentUrl]);
+  });
 }
 
 
@@ -62,5 +74,7 @@ openSnackBar( message: string ,action?: string | undefined){
     }
    })
 }
+
+
 
 }

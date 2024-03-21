@@ -56,7 +56,6 @@ export class PostsComponent implements OnInit {
       likes: [10],
       comments: [{ username: 'msd', comment : 'Come the IPL , Come me'}]
     }
-     this.postsUploaded.push(postObj);
     this.postsService.createNewPost(postObj).subscribe((response)=>{
       console.log(response);
       console.log('post is pushed successfully');

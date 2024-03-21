@@ -1,5 +1,7 @@
-  const cart = ['shoes','kurtas','pyjamas'];
- //const cart = [];
+
+ const cart = ['shoes','kurtas','pyjamas'];
+// const cart = [];
+
 
 //Creating a promise
 // this is production part
@@ -77,6 +79,7 @@ function validateCart(cart){
 
 createOrder(cart).then(function (orderId){
   return orderId;
+
 }).
 catch((err)=>{
   console.log('order failed, we will re-place the order');
@@ -94,6 +97,7 @@ catch((err)=>{
  .then((data)=>{
     console.log('your order execution is finished');
  })
+
 
 
 

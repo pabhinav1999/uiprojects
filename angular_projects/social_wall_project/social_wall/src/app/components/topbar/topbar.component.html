@@ -2,10 +2,11 @@
     <div class="branding">
         SBook
     </div>
-    <div class="account">
-        <button   mat-icon-button [matMenuTriggerFor]="menu">
+    <div *ngIf="this.userService.user" class="account">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon>account_circle</mat-icon>
         </button>
+        <span class="username">{{this.userService.user.userName}}</span>
         <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="onLogOutClicked()">Logout</button>
         </mat-menu>
