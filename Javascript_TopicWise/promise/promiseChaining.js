@@ -1,5 +1,7 @@
+
  const cart = ['shoes','kurtas','pyjamas'];
 // const cart = [];
+
 
 //Creating a promise
 // this is production part
@@ -45,6 +47,29 @@ function proceedToPayment(orderId){
 
 }
 
+function orderSummary (paymentInfo){
+    return new Promise((resolve,reject)=>{
+        if(paymentInfo.payment > 200)
+        resolve(paymentInfo.payment * 2);
+       else {
+        reject(new Error('Order summery failed'))
+       }
+    })
+}
+
+function updateWallet(invoice){
+    return new Promise((resolve,reject)=>{
+        if(invoice > 0){
+            console.log('update wallet balance is', 1000 - invoice);
+        }
+        else {
+            console.log('update wallet balance is ', 1000)
+        }
+        resolve(true);
+
+    })
+}
+
 
 function validateCart(cart){
     return cart.length > 0 ? true : false ;
@@ -54,11 +79,25 @@ function validateCart(cart){
 
 createOrder(cart).then(function (orderId){
   return orderId;
-}).then(function (orderId){
-    return proceedToPayment(orderId);
-}).then((data) => {
-    console.log(data);
+
+}).
+catch((err)=>{
+  console.log('order failed, we will re-place the order');
 })
+.then(function (orderId){
+    return proceedToPayment(orderId);
+})
+.then(function (paymentInfo){
+    return orderSummary(paymentInfo)
+})
+.catch((err)=>{
+    console.log('payment unsucceful');
+ })
+ .then((invoice) => updateWallet(invoice))
+ .then((data)=>{
+    console.log('your order execution is finished');
+ })
+
 
 
 
