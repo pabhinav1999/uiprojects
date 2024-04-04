@@ -160,4 +160,69 @@ console.log('hi ',this.ape); //undefined because it is not in global object , it
 
 //call,apply and bind polyfils
 
+let object1 = {
+  age : 37,
+  printAge: function(ageType){
+    console.log(`${this.age} is a ${ageType}`);
+  }
+}
+
+let object2 = {
+  age : 89
+}
+
+object1.printAge.call(object2,'oldAge');
+
+Function.prototype.myCall = function(context={},...args){
+  if( typeof this !== 'function'){
+    throw new Error(this +' is not a callable');
+  }
+  else {
+  console.log(this);
+  context.fn = this;
+  context.fn(...args)
+  }
+}
+
+object1.printAge.myCall(object2,'oldAge');
+
+//polyfill for apply
+Function.prototype.myApply = function(context={}, ...args){
+  if( typeof this !== 'function'){
+    throw new Error(this +' is not a callable');
+  }
+  else {
+    console.log(this);
+    context.fn = this;
+    context.fn(...args)
+  }
+}
+
+object1.printAge.apply(object1,['middleage']);
+
+let bindex = object1.printAge.bind(object2);
+
+//polyfill for bind
+Function.prototype.myBind = function(context = {}, ...args1) {
+  if (typeof this !== 'function') {
+    throw new Error(`${this} is not a callable function`);
+  }
+
+  const fn = this;
+
+  return function(...args2) {
+    console.log('this is a bind polyfill');
+    const mergedArgs = args1.concat(args2);
+
+    return fn.apply(context, mergedArgs);
+  };
+};
+
+const bindex2 = object1.printAge.myBind(object2, 'dotin');
+bindex2('oldAge');
+
+//arguments is a array like object accesible inside functions that contains the values of the arguments passed to that function
+
+
+
 
